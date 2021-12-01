@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+/* ### Primary */
+--pale-blue: hsl(225, 100%, 94%);
+--bright-blue: hsl(245, 75%, 52%);
+
+/* ### Neutral */
+--very-pale-blue: hsl(225, 100%, 98%);
+--box-shadow: hsla(252, 27%, 78%, 0.883);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+--active-state: hsl(244, 97%, 74%);
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(/Project_2nd_Try/images/pattern-background-mobile.svg),var(--pale-blue);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;    
+    font-size: 1.6rem;
+}
+
+.card-wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 100%;
+    max-width: 330px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0px 3px 10px 0px var(--box-shadow);
+}
+
+.card-top img {
+    width: 100%;
+    height: 165px;
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 0 2.5rem;
+}
+
+.card-bottom .title1 {
+    font-weight: 900;
+    padding-top: 2.7rem;
+    padding-bottom: 1.6rem;
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+}
+
+.card-bottom .description {
+    padding-bottom: 2.3rem;
+    color: var(--desaturated-blue);
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.card-bottom .selected-plan-container {
+    background-color: var(--very-pale-blue);
+    margin-bottom: 2.3rem;
+    padding: 1.7rem 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.card-bottom .selected-plan-container a {
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--bright-blue);
+}
+
+
+.card-bottom .selected-plan-container a:hover, .card-bottom .selected-plan-container a:focus {
+    color: var(--active-state);
+    cursor: pointer;
+}
+
+.card-bottom .selected-plan-container .flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4rem;
+
+}
+
+.card-bottom .selected-plan-container .selected-plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 2rem;
+    font-size: 1.7rem;
+}
+.card-bottom .confirm-button {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--bright-blue);
+    font-weight: 700;
+    color: white;
+    display: block;
+    padding: 1.4rem 0;
+    margin-bottom: 2.5rem;
+    box-shadow: 0px 15px 10px 3px var(--pale-blue);
+}
+
+.card-bottom .confirm-button:hover, .card-bottom .confirm-button:focus {
+    background-color: var(--active-state);
+}
+.card-bottom .cancel-button {
+    display: block;
+    margin-bottom: 3.2rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--desaturated-blue);
+}
+
+.card-bottom .cancel-button:hover, .card-bottom .cancel-button:focus{
+    color: var(--dark-blue);
+}
+
+.plan-type {
+    font-weight: 700;
+}
+.price {
+    color: hsl(224, 23%, 55%);
+}
+
+@media (min-width: 768px) {
+    .card{
+        max-width: 450px;
+    }
+
+    .card-top img {
+        height: auto;
+    }
+
+    .card-bottom {
+        padding: 0 4.5rem;
+    }
+
+    .card-bottom .title1 {
+        padding-top: 4rem;
+        font-size: 2.8rem;
+        padding-bottom: 1.8rem;
+    }
+
+    .card-bottom .description {
+        padding-bottom: 2rem;
+        font-size: 1.7rem;
+        text-align:center;
+    }
+
+    .card-bottom .selected-plan-container {
+        padding: 2.5rem 0;
+        margin-bottom: 3.4rem;
+    }
+
+    .card-bottom .confirm-button {
+        margin-bottom: 3rem;
+    }
+
+    .card-bottom .cancel-button {
+        font-size: 1.5rem;
+        padding-bottom: 1.6rem;
+    }
+}
+.attribution { 
+    font-size: 11px;  
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+ }
